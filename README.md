@@ -4,8 +4,8 @@ This project boilerplate is for Edge Delivery Services projects that integrate w
 
 ## Environments
 
-- Preview: https://main--{repo}--{owner}.hlx.page/
-- Live: https://main--{repo}--{owner}.hlx.live/
+- Preview: https://main--storefront--iliampav.hlx.page/
+- Live: https://main--storefront--iliampav.hlx.live/
 
 ## Pre-requisites
 
@@ -38,4 +38,4 @@ npm run lint
 1. Add your Adobe Commerce SaaS configuration in the `configs.xlsx` sheet in your content repository.
 1. Install the [AEM CLI](https://github.com/adobe/aem-cli): `npm install -g @adobe/aem-cli`
 1. Start AEM Proxy: `aem up` (opens your browser at `http://localhost:3000`)
-1. Open the `{repo}` directory in your favorite IDE and start coding :)
+1. Open the `storefront` directory in your favorite IDE and start coding :)
