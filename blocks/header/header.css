@@ -14,6 +14,7 @@ header .nav-wrapper {
 }
 
 header nav {
+  position: relative;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -136,8 +137,10 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
   }
 }
 
-header nav {
-  position: relative;
+.popupMenuContent .popupMenuUrlList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* sections */
@@ -168,7 +171,7 @@ header nav .default-content-wrapper ul{
   margin: 0;
 }
 
-/* brand logo*/
+/* brand logo */
 header nav .nav-brand .default-content-wrapper{
   margin: 0;
   position: relative;
@@ -185,16 +188,30 @@ header nav .nav-brand .default-content-wrapper p img{
   height: 135px;
 }
 
-/* social media menu */
+/* section menu */
 
-header nav .nav-social-media .default-content-wrapper ul li:not(:last-of-type){
-  margin-right: 8px;
+header nav .nav-sections .default-content-wrapper {
+  justify-content: center;
+  margin: 10px 0;
+  padding: 20px 0;
+  border-top: 1px solid rgba(159 152 161 / 10%);
+  border-bottom: 1px solid rgba(159 152 161 / 20%);
 }
+
+header nav .nav-sections .default-content-wrapper ul li{
+  padding: 0 15px;
+}
+
+/* social media menu */
 
 header nav .nav-social-media .default-content-wrapper ul li{
   width: 26px;
   height: 26px;
   position: relative;
+}
+
+header nav .nav-social-media .default-content-wrapper ul li:not(:last-of-type){
+  margin-right: 8px;
 }
 
 header nav .nav-social-media .default-content-wrapper ul li img{
@@ -218,20 +235,6 @@ header nav .nav-video .default-content-wrapper ul li img{
   width: 45px;
   height: 30px;
   margin-right: 10px;
-}
-
-/* section menu */
-
-header nav .nav-sections .default-content-wrapper {
-  justify-content: center;
-  margin: 10px 0;
-  padding: 20px 0;
-  border-top: 1px solid rgba(159, 152, 161, 0.1);
-  border-bottom: 1px solid rgba(159, 152, 161, 0.2)
-}
-
-header nav .nav-sections .default-content-wrapper ul li{
-  padding: 0 15px;
 }
 
 /* tools */
@@ -469,12 +472,6 @@ header {
   padding: 0;
   margin: 0;
   overflow: hidden;
-}
-
-.popupMenuContent .popupMenuUrlList li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .popupMenuContent .popupMenuUrlList li > a {
