@@ -1,20 +1,20 @@
 /* eslint-disable import/no-unresolved */
 
 // Drop-in Providers
-import { render as cartProvider } from '@dropins/storefront-cart/render.js';
+// import { render as cartProvider } from '@dropins/storefront-cart/render.js';
 
 // Drop-in Containers
-import MiniCart from '@dropins/storefront-cart/containers/MiniCart.js';
+// import MiniCart from '@dropins/storefront-cart/containers/MiniCart.js';
 
 // Drop-in Tools
-import { events } from '@dropins/tools/event-bus.js';
+// import { events } from '@dropins/tools/event-bus.js';
 
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 // TODO: Following two imports added for demo purpose (Auth Drop-In)
-import renderAuthCombine from './renderAuthCombine.js';
-import { renderAuthDropdown } from './renderAuthDropdown.js';
+// import renderAuthCombine from './renderAuthCombine.js';
+// import { renderAuthDropdown } from './renderAuthDropdown.js';
 
 // media query match that indicates mobile/tablet width
 const isDesktop = window.matchMedia('(min-width: 900px)');
@@ -121,6 +121,8 @@ export default async function decorate(block) {
   // load nav as fragment
   const navMeta = getMetadata('nav');
   const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
+
+  // traz as informações do arquivo
   const fragment = await loadFragment(navPath);
 
   // decorate nav DOM
@@ -129,7 +131,7 @@ export default async function decorate(block) {
   nav.id = 'nav';
   while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
 
-  const classes = ['brand', 'sections', 'tools'];
+  const classes = ['brand', 'social-media', 'video', 'sections'];
   classes.forEach((c, i) => {
     const section = nav.children[i];
     if (section) section.classList.add(`nav-${c}`);
@@ -143,126 +145,126 @@ export default async function decorate(block) {
   }
 
   const navSections = nav.querySelector('.nav-sections');
-  if (navSections) {
-    navSections
-      .querySelectorAll(':scope .default-content-wrapper > ul > li')
-      .forEach((navSection) => {
-        if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
-        navSection.addEventListener('click', () => {
-          if (isDesktop.matches) {
-            const expanded = navSection.getAttribute('aria-expanded') === 'true';
-            toggleAllNavSections(navSections);
-            navSection.setAttribute(
-              'aria-expanded',
-              expanded ? 'false' : 'true',
-            );
-          }
-        });
-      });
-  }
+  // if (navSections) {
+  //   navSections
+  //     .querySelectorAll(':scope .default-content-wrapper > ul > li')
+  //     .forEach((navSection) => {
+  //       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
+  //       navSection.addEventListener('click', () => {
+  //         if (isDesktop.matches) {
+  //           const expanded = navSection.getAttribute('aria-expanded') === 'true';
+  //           toggleAllNavSections(navSections);
+  //           navSection.setAttribute(
+  //             'aria-expanded',
+  //             expanded ? 'false' : 'true',
+  //           );
+  //         }
+  //       });
+  //     });
+  // }
 
-  const navTools = nav.querySelector('.nav-tools');
+  // const navTools = nav.querySelector('.nav-tools');
 
   /** Mini Cart */
-  const excludeMiniCartFromPaths = ['/checkout', '/order-confirmation'];
+  // const excludeMiniCartFromPaths = ['/checkout', '/order-confirmation'];
 
-  const minicart = document.createRange().createContextualFragment(`
-     <div class="minicart-wrapper nav-tools-wrapper">
-       <button type="button" class="nav-cart-button" aria-label="Cart"></button>
-       <div class="minicart-panel nav-tools-panel"></div>
-     </div>
-   `);
+  // const minicart = document.createRange().createContextualFragment(`
+  //    <div class="minicart-wrapper nav-tools-wrapper">
+  //      <button type="button" class="nav-cart-button" aria-label="Cart"></button>
+  //      <div class="minicart-panel nav-tools-panel"></div>
+  //    </div>
+  //  `);
 
-  navTools.append(minicart);
+  // navTools.append(minicart);
 
-  const minicartPanel = navTools.querySelector('.minicart-panel');
+  // const minicartPanel = navTools.querySelector('.minicart-panel');
 
-  const cartButton = navTools.querySelector('.nav-cart-button');
+  // const cartButton = navTools.querySelector('.nav-cart-button');
 
-  if (excludeMiniCartFromPaths.includes(window.location.pathname)) {
-    cartButton.style.display = 'none';
-  }
+  // if (excludeMiniCartFromPaths.includes(window.location.pathname)) {
+  //   cartButton.style.display = 'none';
+  // }
 
-  async function toggleMiniCart(state) {
-    const show = state ?? !minicartPanel.classList.contains('nav-tools-panel--show');
+  // async function toggleMiniCart(state) {
+  //   const show = state ?? !minicartPanel.classList.contains('nav-tools-panel--show');
 
-    if (show) {
-      await cartProvider.render(MiniCart, {
-        routeEmptyCartCTA: () => '/',
-        routeProduct: (product) => `/products/${product.url.urlKey}/${product.sku}`,
-        routeCart: () => '/cart',
-        routeCheckout: () => '/checkout',
-      })(minicartPanel);
-    } else {
-      cartProvider.unmount(minicartPanel);
-    }
+  //   if (show) {
+  //     await cartProvider.render(MiniCart, {
+  //       routeEmptyCartCTA: () => '/',
+  //       routeProduct: (product) => `/products/${product.url.urlKey}/${product.sku}`,
+  //       routeCart: () => '/cart',
+  //       routeCheckout: () => '/checkout',
+  //     })(minicartPanel);
+  //   } else {
+  //     cartProvider.unmount(minicartPanel);
+  //   }
 
-    minicartPanel.classList.toggle('nav-tools-panel--show', show);
-  }
+  //   minicartPanel.classList.toggle('nav-tools-panel--show', show);
+  // }
 
-  cartButton.addEventListener('click', () => toggleMiniCart());
+  // cartButton.addEventListener('click', () => toggleMiniCart());
 
   // Cart Item Counter
-  events.on(
-    'cart/data',
-    (data) => {
-      if (data?.totalQuantity) {
-        cartButton.setAttribute('data-count', data.totalQuantity);
-      } else {
-        cartButton.removeAttribute('data-count');
-      }
-    },
-    { eager: true },
-  );
+  // events.on(
+  //   'cart/data',
+  //   (data) => {
+  //     if (data?.totalQuantity) {
+  //       cartButton.setAttribute('data-count', data.totalQuantity);
+  //     } else {
+  //       cartButton.removeAttribute('data-count');
+  //     }
+  //   },
+  //   { eager: true },
+  // );
 
   /** Search */
 
   // TODO
-  const search = document.createRange().createContextualFragment(`
-  <div class="search-wrapper nav-tools-wrapper">
-    <button type="button" class="nav-search-button">Search</button>
-    <div class="nav-search-input nav-search-panel nav-tools-panel">
-      <form action="/search" method="GET">
-        <input id="search" type="search" name="q" placeholder="Search" />
-        <div id="search_autocomplete" class="search-autocomplete"></div>
-      </form>
-    </div>
-  </div>
-  `);
+  // const search = document.createRange().createContextualFragment(`
+  // <div class="search-wrapper nav-tools-wrapper">
+  //   <button type="button" class="nav-search-button">Search</button>
+  //   <div class="nav-search-input nav-search-panel nav-tools-panel">
+  //     <form action="/search" method="GET">
+  //       <input id="search" type="search" name="q" placeholder="Search" />
+  //       <div id="search_autocomplete" class="search-autocomplete"></div>
+  //     </form>
+  //   </div>
+  // </div>
+  // `);
 
-  navTools.append(search);
+  // navTools.append(search);
 
-  const searchPanel = navTools.querySelector('.nav-search-panel');
+  // const searchPanel = navTools.querySelector('.nav-search-panel');
 
-  const searchButton = navTools.querySelector('.nav-search-button');
+  // const searchButton = navTools.querySelector('.nav-search-button');
 
-  const searchInput = searchPanel.querySelector('input');
+  // const searchInput = searchPanel.querySelector('input');
 
-  async function toggleSearch(state) {
-    const show = state ?? !searchPanel.classList.contains('nav-tools-panel--show');
+  // async function toggleSearch(state) {
+  //   const show = state ?? !searchPanel.classList.contains('nav-tools-panel--show');
 
-    searchPanel.classList.toggle('nav-tools-panel--show', show);
+  //   searchPanel.classList.toggle('nav-tools-panel--show', show);
 
-    if (show) {
-      await import('./searchbar.js');
-      searchInput.focus();
-    }
-  }
+  //   if (show) {
+  //     await import('./searchbar.js');
+  //     searchInput.focus();
+  //   }
+  // }
 
-  navTools
-    .querySelector('.nav-search-button')
-    .addEventListener('click', () => toggleSearch());
+  // navTools
+  //   .querySelector('.nav-search-button')
+  //   .addEventListener('click', () => toggleSearch());
 
   // Close panels when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!minicartPanel.contains(e.target) && !cartButton.contains(e.target)) {
-      toggleMiniCart(false);
-    }
+  // document.addEventListener('click', (e) => {
+  // if (!minicartPanel.contains(e.target) && !cartButton.contains(e.target)) {
+  //   toggleMiniCart(false);
+  // }
 
-    if (!searchPanel.contains(e.target) && !searchButton.contains(e.target)) {
-      toggleSearch(false);
-    }
-  });
+  //   if (!searchPanel.contains(e.target) && !searchButton.contains(e.target)) {
+  //     toggleSearch(false);
+  //   }
+  // });
 
   // hamburger for mobile
   const hamburger = document.createElement('div');
@@ -283,6 +285,6 @@ export default async function decorate(block) {
   block.append(navWrapper);
 
   // TODO: Following statements added for demo purpose (Auth Drop-In)
-  renderAuthCombine(navSections);
-  renderAuthDropdown(navSections);
+  // renderAuthCombine(navSections);
+  // renderAuthDropdown(navSections);
 }
