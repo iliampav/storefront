@@ -14,7 +14,7 @@ main .phero-container > div {
 }
 
 .phero {
-  padding: 32px 0 0 0;
+  padding: 32px 0 0;
   min-height: 300px;
   display: flex;
   align-items: center;
@@ -38,9 +38,9 @@ main .phero-container > div {
 }
 
 .phero .phero-container-title h1 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+  text-rendering: "optimizelegibility";
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'liga';
   font-weight: 100;
@@ -51,12 +51,12 @@ main .phero-container > div {
 .phero .phero-container-title h2 {
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+  text-rendering: "optimizeLegibility";
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'liga';
   font-size: 32px;
   font-weight: 900;
-  color: rgb(11, 132, 194);
+  color: rgb(11 132 194);
 }
 
 /* image container customization */
@@ -104,12 +104,12 @@ main .phero-container > div {
   align-items: center;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+  text-rendering: "optimizeLegibility";
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'liga';
   font-size: 28px;
   font-weight: 700;
-  color: rgb(133, 147, 168, .7);
+  color: rgb(133 147 168 70%);
   margin-right: auto;
 }
 
@@ -121,7 +121,7 @@ main .phero-container > div {
   max-width: 270px;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+  text-rendering: "optimizeLegibility";
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'liga';
   font-size: 24px;
@@ -138,14 +138,14 @@ main .phero-container > div {
   font-size: 12px;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+  text-rendering: "optimizeLegibility";
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'liga';
   font-weight: 300;
 }
 
 .phero .phero-container-menu .phero-menu-list li a:hover{
-  color: rgb(82, 91, 98);
+  color: rgb(82 91 98);
   font-weight: 400;
   text-decoration:none;
 }
