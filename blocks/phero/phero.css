@@ -1,0 +1,169 @@
+main .phero-container {
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+main .phero-container * {
+  box-sizing: border-box;
+}
+
+main .phero-container > div {
+  max-width: unset;
+  margin-top: 170px;
+}
+
+.phero {
+  padding: 32px 0 0 0;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* title container customization */
+.phero .phero-container-title {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.phero .phero-container-title > div {
+  min-height: 492px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.phero .phero-container-title h1 {
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+  font-weight: 100;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.phero .phero-container-title h2 {
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+  font-size: 32px;
+  font-weight: 900;
+  color: rgb(11, 132, 194);
+}
+
+/* image container customization */
+.phero .phero-container-bg-image picture {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  object-fit: cover;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.phero .phero-container-bg-image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* floating menu customization */
+.phero .phero-container-menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  overflow: hidden;
+}
+
+.phero .phero-container-menu > div{
+  max-width: 1200px;
+  width: 100%;
+}
+
+.phero .phero-container-menu .phero-menu-list{
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  position:relative;
+}
+
+.phero .phero-container-menu .phero-menu-list li:first-of-type{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+  font-size: 28px;
+  font-weight: 700;
+  color: rgb(133, 147, 168, .7);
+  margin-right: auto;
+}
+
+.phero .phero-container-menu .phero-menu-list li{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 24%;
+  max-width: 270px;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+  font-size: 24px;
+  font-weight: 700;
+  color: rgb(133, 147, 168, .7);
+}
+
+.phero .phero-container-menu .phero-menu-list li:not(:first-of-type){
+  padding: 20px 0 0 30px;
+  background-color: white;
+}
+
+.phero .phero-container-menu .phero-menu-list li a{
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+  font-weight: 300;
+}
+
+.phero .phero-container-menu .phero-menu-list li a:hover{
+  color: rgb(82, 91, 98);
+  font-weight: 400;
+  text-decoration:none;
+}
+
+.phero .phero-container-menu .phero-menu-list li.phero-white-background{
+  position: absolute;
+  background-color: white;
+  min-width: 100%;
+  left: 50%;
+  top: 0;
+  padding: 0;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.phero .phero-container-menu .phero-menu-list img{
+  width: 80px;
+  min-width: 80px;
+  height: 60px;
+  margin-right: 10px;
+}
