@@ -21,6 +21,10 @@ main .postwithimage-container > div {
   position: relative;
 }
 
+.postwithimage p {
+  color: rgb(133, 147, 168);
+}
+
 /* title section */
 
 main .postwithimage-container .post-container-title{
@@ -51,6 +55,7 @@ main .postwithimage-container .post-container-first{
   max-width: 1200px;
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
 }
 
 /* div outside second post for building purpose */
@@ -65,13 +70,12 @@ main .postwithimage-container .post-container-second > div > div{
   justify-content: center;
   align-items: center;
   background-color: white;
-  padding: 30px 0;
+  padding: 30px 0 0;
 }
 
 main .postwithimage-container .post-container-second a {
   font-family: Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
-  text-rendering: "optimizeLegibility";
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'liga';
   font-size: 12px;
@@ -103,7 +107,6 @@ main .postwithimage-container .post-container-first .button-container a{
   border: unset;
   font-family: Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
-  text-rendering: "optimizeLegibility";
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'liga';
   font-size: 24px;

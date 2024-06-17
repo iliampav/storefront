@@ -38,6 +38,15 @@ export default function decorate(block) {
     }
   }
 
+  function replacePreWithParagraph(preElement) {
+    const codeElement = preElement.querySelector('code');
+    if (codeElement) {
+      const pElement = document.createElement('p');
+      pElement.innerHTML = codeElement.innerHTML.replace(/\n/g, '<br>');
+      preElement.parentNode.replaceChild(pElement, preElement);
+    }
+  }
+
   const maxLengths = {
     'post-container-first-column': {
       link: 43,
@@ -66,18 +75,8 @@ export default function decorate(block) {
     } else if (className === 'post-container-second-column') {
       const preElements = div.querySelectorAll('pre');
       preElements.forEach((preElement) => {
-        const codeElement = preElement.querySelector('code');
-        if (codeElement) {
-          const pElement = document.createElement('p');
-          pElement.innerHTML = codeElement.innerHTML;
-          preElement.parentNode.replaceChild(pElement, preElement);
-        }
+        replacePreWithParagraph(preElement);
       });
-
-      const paragraph = div.querySelector('p');
-      if (paragraph) {
-        truncateText(paragraph, maxLengths[className]);
-      }
     } else if (className === 'post-container-third-column') {
       const paragraphs = div.querySelectorAll('p');
       paragraphs.forEach((p) => {

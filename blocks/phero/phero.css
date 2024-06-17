@@ -33,14 +33,13 @@ main .phero-container > div {
   min-height: 492px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
 }
 
 .phero .phero-container-title h1 {
   font-family: Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
-  text-rendering: "optimizelegibility";
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'liga';
   font-weight: 100;
@@ -51,7 +50,6 @@ main .phero-container > div {
 .phero .phero-container-title h2 {
   font-family: Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
-  text-rendering: "optimizeLegibility";
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'liga';
   font-size: 32px;
@@ -106,7 +104,6 @@ main .phero-container > div {
   max-width: 270px;
   font-family: Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
-  text-rendering: "optimizeLegibility";
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'liga';
   font-size: 24px;
@@ -120,7 +117,6 @@ main .phero-container > div {
   align-items: center;
   font-family: Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
-  text-rendering: "optimizeLegibility";
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'liga';
   font-size: 28px;
@@ -138,7 +134,6 @@ main .phero-container > div {
   font-size: 12px;
   font-family: Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
-  text-rendering: "optimizeLegibility";
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'liga';
   font-weight: 300;
