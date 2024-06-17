@@ -27,7 +27,7 @@ main .postonlytext-container .postonlytext {
 
 main .postonlytext-container p {  
   text-align: justify;
-  font-family: "Roboto", sans-serif;
+  font-family: Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: "optimizeLegibility";
   -moz-osx-font-smoothing: grayscale;
@@ -55,7 +55,7 @@ main .postonlytext-container .postonlytext > div:last-of-type {
 }
 
 main .postonlytext-container .postonlytext .post-container-first-column a {
-  font-family: "Roboto", sans-serif;
+  font-family: Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: "optimizeLegibility";
   -moz-osx-font-smoothing: grayscale;

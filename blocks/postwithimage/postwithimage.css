@@ -75,7 +75,7 @@ main .postwithimage-container .post-container-first .button-container{
 
 main .postwithimage-container .post-container-first .button-container a{
   border: unset;
-  font-family: "Roboto", sans-serif;
+  font-family: Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: "optimizeLegibility";
   -moz-osx-font-smoothing: grayscale;
@@ -134,7 +134,7 @@ main .postwithimage-container .post-container-second p {
 }
 
 main .postwithimage-container .post-container-second a {
-  font-family: "Roboto", sans-serif;
+  font-family: Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: "optimizeLegibility";
   -moz-osx-font-smoothing: grayscale;
