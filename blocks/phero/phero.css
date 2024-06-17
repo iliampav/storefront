@@ -49,7 +49,7 @@ main .phero-container > div {
 }
 
 .phero .phero-container-title h2 {
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: "optimizeLegibility";
   -moz-osx-font-smoothing: grayscale;
@@ -104,21 +104,21 @@ main .phero-container > div {
   align-items: center;
   width: 24%;
   max-width: 270px;
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: "optimizeLegibility";
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'liga';
   font-size: 24px;
   font-weight: 700;
-  color: rgb(133, 147, 168, .7);
+  color: rgb(133 147 168 70%);
 }
 
 .phero .phero-container-menu .phero-menu-list li:first-of-type{
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: "optimizeLegibility";
   -moz-osx-font-smoothing: grayscale;
@@ -136,7 +136,7 @@ main .phero-container > div {
 
 .phero .phero-container-menu .phero-menu-list li a{
   font-size: 12px;
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: "optimizeLegibility";
   -moz-osx-font-smoothing: grayscale;

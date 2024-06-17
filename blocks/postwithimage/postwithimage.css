@@ -53,6 +53,21 @@ main .postwithimage-container .post-container-first{
   align-items: flex-start;
 }
 
+/* div outside second post for building purpose */
+main .postwithimage-container .post-container-second > div{
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+}
+
+main .postwithimage-container .post-container-second > div > div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 30px 0;
+}
+
 main .postwithimage-container .post-container-first div:first-of-type{
  width: 32%;
 }
@@ -103,26 +118,8 @@ main .postwithimage-container .post-container-second{
   justify-content: center;
 }
 
-main .postwithimage-container .post-container-second > div{
-  display: flex;
-  width: 100%;
-  max-width: 1200px;
-}
-
-main .postwithimage-container .post-container-second > div > div{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  padding: 30px 0;
-}
-
 main .postwithimage-container .post-container-second > div > div:last-of-type{
   flex-direction: column;
-}
-
-main .postwithimage-container .post-container-second > div > div p:first-of-type{
-  margin-bottom: 10px;
 }
 
 main .postwithimage-container .post-container-second p {
@@ -141,6 +138,10 @@ main .postwithimage-container .post-container-second a {
   font-feature-settings: 'liga';
   font-size: 12px;
   font-weight: 700;
+  margin-bottom: 10px;
+}
+
+main .postwithimage-container .post-container-second > div > div p:first-of-type{
   margin-bottom: 10px;
 }
 
