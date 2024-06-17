@@ -68,6 +68,17 @@ main .postwithimage-container .post-container-second > div > div{
   padding: 30px 0;
 }
 
+main .postwithimage-container .post-container-second a {
+  font-family: Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: "optimizeLegibility";
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
 main .postwithimage-container .post-container-first div:first-of-type{
  width: 32%;
 }
@@ -128,17 +139,6 @@ main .postwithimage-container .post-container-second p {
   width: 100%;
   max-width: 375px;
   margin-right: 30px;
-}
-
-main .postwithimage-container .post-container-second a {
-  font-family: Roboto, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: "optimizeLegibility";
-  -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: 'liga';
-  font-size: 12px;
-  font-weight: 700;
-  margin-bottom: 10px;
 }
 
 main .postwithimage-container .post-container-second > div > div p:first-of-type{
