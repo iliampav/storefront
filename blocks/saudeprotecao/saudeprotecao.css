@@ -11,7 +11,7 @@ main .saudeprotecao-container a.button.secondary {
     white-space: unset;
     font-size: 22px;
     line-height: 32px;
-    font-weight: 300px;
+    font-weight: 300;
     font-family: Roboto, sans-serif;
     text-align: start;
     margin: 0;
@@ -95,6 +95,7 @@ main .saudeprotecao-container .saudeprotecao-container-second {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 40px;
 }
 
 main .saudeprotecao-container .saudeprotecao-container-second > div:nth-child(2),
@@ -107,4 +108,14 @@ main .saudeprotecao-container .saudeprotecao-container-second > div:nth-child(1)
 main .saudeprotecao-container .saudeprotecao-container-second > div:nth-child(3){
     width: 11%;
     height: auto;
+}
+
+main .saudeprotecao-container .saudeprotecao-container-second p{
+    margin: 0;
+}
+
+main .saudeprotecao-container .saudeprotecao-container-second a.button.secondary{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
 }

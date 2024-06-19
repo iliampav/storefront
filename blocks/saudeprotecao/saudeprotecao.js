@@ -52,7 +52,9 @@ export default function decorate(block) {
       link: 43,
       paragraph: 291,
     },
-    'saudeprotecao-container-second': {},
+    'saudeprotecao-container-second': {
+      paragraph: 74,
+    },
   };
 
   function processChildDivs(parent) {
@@ -84,27 +86,15 @@ export default function decorate(block) {
   }
 
   function truncateTextInContainer(container, maxLength) {
-    const firstDiv = container.querySelector(':scope > div:nth-child(1)');
-    const secondDiv = container.querySelector(':scope > div:nth-child(2)');
+    const aElement = container.querySelector('a');
+    const pElements = container.querySelectorAll('p');
 
-    function changeElementsSize(element) {
-      const aElement = element.querySelector('a');
-      const pElements = element.querySelectorAll('p');
-      if (aElement) truncateText(aElement, maxLength.link);
-      pElements.forEach((pElement) => {
-        if (!pElement.classList.contains('button-container')) {
-          truncateText(pElement, maxLength.paragraph);
-        }
-      });
-    }
-
-    if (firstDiv) {
-      changeElementsSize(firstDiv);
-    }
-
-    if (secondDiv) {
-      changeElementsSize(secondDiv);
-    }
+    if (aElement) truncateText(aElement, maxLength.link);
+    pElements.forEach((pElement) => {
+      if (!pElement.classList.contains('button-container')) {
+        truncateText(pElement, maxLength.paragraph);
+      }
+    });
   }
 
   const firstLevelDivs = block.querySelectorAll(':scope > div');
@@ -120,6 +110,10 @@ export default function decorate(block) {
     }
 
     if (className === 'saudeprotecao-container-first') {
+      truncateTextInContainer(div, maxLengthsObject[className]);
+    }
+
+    if (className === 'saudeprotecao-container-second') {
       truncateTextInContainer(div, maxLengthsObject[className]);
     }
   });
