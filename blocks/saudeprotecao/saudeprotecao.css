@@ -63,6 +63,12 @@ main .saudeprotecao-container .saudeprotecao-container-first > div:last-of-type{
     z-index: -1;
 }
 
+/* change this styling place for building */
+main .saudeprotecao-container .saudeprotecao-container-second img{
+    width: 135px;
+    height: 85px;
+}
+
 main .saudeprotecao-container .saudeprotecao-container-first > div:last-of-type img{
     max-width: 100%;
     width: 100%;
@@ -77,12 +83,6 @@ main .saudeprotecao-container .saudeprotecao-container-first > div:first-of-type
 main .saudeprotecao-container .saudeprotecao-container-first >div:nth-child(2){
     margin-top: 207px;
     background-color: white;
-}
-
-/* change this styling place for building */
-main .saudeprotecao-container .saudeprotecao-container-second img{
-    width: 135px;
-    height: 85px;
 }
 
 main .saudeprotecao-container .saudeprotecao-container-first > div:first-of-type img{
