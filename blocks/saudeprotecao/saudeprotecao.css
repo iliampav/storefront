@@ -55,7 +55,7 @@ main .saudeprotecao-container .saudeprotecao-container-first > div{
 
 main .saudeprotecao-container .saudeprotecao-container-first > div:last-of-type{
     width: 58%;
-    padding: 0 0 2px 0;
+    padding: 0 0 2px;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -77,6 +77,12 @@ main .saudeprotecao-container .saudeprotecao-container-first > div:first-of-type
 main .saudeprotecao-container .saudeprotecao-container-first >div:nth-child(2){
     margin-top: 207px;
     background-color: white;
+}
+
+/* change this styling place for building */
+main .saudeprotecao-container .saudeprotecao-container-second img{
+    width: 135px;
+    height: 85px;
 }
 
 main .saudeprotecao-container .saudeprotecao-container-first > div:first-of-type img{
@@ -101,9 +107,4 @@ main .saudeprotecao-container .saudeprotecao-container-second > div:nth-child(1)
 main .saudeprotecao-container .saudeprotecao-container-second > div:nth-child(3){
     width: 11%;
     height: auto;
-}
-
-main .saudeprotecao-container .saudeprotecao-container-second img{
-    width: 135px;
-    height: 85px;
 }

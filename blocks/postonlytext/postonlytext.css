@@ -79,7 +79,7 @@ main .postonlytext-container .postonlytext .post-container-first-column a {
 
 main .postonlytext-container .postonlytext .post-container-second-column {
   position: relative;
-  box-shadow: 5px 15px 30px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 15px 30px 0px rgba(0 0 0 30%);
   border-radius: 20px;
 }
 
