@@ -36,11 +36,6 @@ main .postonlytext-container p {
   font-weight: 400;
 }
 
-main .postonlytext-container .postonlytext > div {
-  width: 27%;
-  height: auto;
-}
-
 main .postonlytext-container .postonlytext > div:nth-child(2) {
   width: 42%;
   height: 100%;
